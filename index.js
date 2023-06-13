@@ -6,7 +6,12 @@ const router = require("./routes/jobs.routes")
 const app = express()
 app.use(express.json())
 app.use(cors())
+
+app.get("/",(req,res)=>{
+    res.send("Welcome ")
+})
 app.use("/api",router)
+
 
 app.listen(9009,async()=>{
     try{
